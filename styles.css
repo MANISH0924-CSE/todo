@@ -1,0 +1,37 @@
+* { box-sizing: border-box; }
+html, body, #app { height: 100%; margin: 0; }
+body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: #0f172a; background: #f8fafc; }
+header { padding: 12px 16px; background: #fff; border-bottom: 1px solid #e2e8f0; display: grid; gap: 8px; }
+h1 { margin: 0; font-size: 18px; }
+.controls { display: flex; gap: 8px; flex-wrap: wrap; }
+button { padding: 8px 12px; border-radius: 8px; border: 1px solid #cbd5e1; background: #0ea5e9; color: #fff; cursor: pointer; }
+button[disabled] { opacity: 0.6; cursor: not-allowed; background: #94a3b8; }
+.stats { display: flex; gap: 16px; flex-wrap: wrap; font-size: 14px; }
+#map { height: calc(100% - 120px); }
+
+.toggle { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; }
+select { padding: 6px 8px; border-radius: 6px; border: 1px solid #cbd5e1; background: #fff; }
+
+/* Dark mode */
+.dark body { color: #e2e8f0; background: #0b1220; }
+.dark header { background: #0f172a; border-bottom-color: #1e293b; }
+.dark button { border-color: #334155; background: #0ea5e9; }
+.dark button[disabled] { background: #475569; }
+.dark select { background: #0f172a; color: #e2e8f0; border-color: #334155; }
+
+/* Destination overlay */
+.overlay { position: fixed; inset: 0; display: grid; place-items: center; background: rgba(15, 23, 42, 0.55); z-index: 1000; }
+.overlay-card { width: min(560px, 92vw); background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+.overlay-card h2 { margin: 0 0 12px; font-size: 18px; }
+.overlay-card p { margin: 0 0 12px; font-size: 14px; line-height: 1.4; }
+.overlay-card input { width: 100%; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 14px; }
+.overlay-actions { margin-top: 10px; display: flex; gap: 8px; justify-content: flex-end; }
+.results { list-style: none; padding: 0; margin: 12px 0 0; max-height: 40vh; overflow: auto; }
+.results li { padding: 10px 12px; border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 8px; cursor: pointer; }
+.results li:hover { background: #f1f5f9; }
+.dark .overlay-card { background: #0f172a; border-color: #334155; }
+.dark .overlay-card input { background: #0b1220; color: #e2e8f0; border-color: #334155; }
+.dark .results li { border-color: #334155; }
+.dark .results li:hover { background: #111827; }
+
+
